@@ -1,0 +1,12 @@
+.message-wrapper {
+    width: 100vw;
+    height: 5vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connection-message {
+    font-size: 24px;
+}

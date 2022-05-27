@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Navbar.css";
+import { getAccountBalance } from "../../api"
 
-const Navbar = ({ side, setSide }) => {
+const Navbar = ({ side, setSide, _init, initialized, account }) => {
 
     return (
         <div className='navbar-wrapper'>
@@ -13,16 +14,21 @@ const Navbar = ({ side, setSide }) => {
                     Interact
                 </div>
             </div>
-            {/* <div className='navbar-right-wrapper'>
+
+            <div className='navbar-right-wrapper'>
                 <div className="navbar-tab-3">
-                    <div className="navbar-bal">
-                        0 ETH
-                    </div>
                     <div className="navbar-account">
-                        0x2860...127e
+                        {account.account.address}
                     </div>
                 </div>
-            </div> */}
+                {
+                    !initialized ? <div className="navbar-tab-3">
+                        <button className="navbar-account btn" onClick={_init}>
+                            Connect Wallet
+                        </button>
+                    </div> : null
+                }
+            </div>
         </div>
     )
 }
