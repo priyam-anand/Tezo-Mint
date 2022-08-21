@@ -3,7 +3,7 @@ import { BeaconWallet } from "@taquito/beacon-wallet";
 import Contract from "./fungibleContractAsset.json"
 
 
-const Tezos = new TezosToolkit('https://ithacanet.ecadinfra.com/');
+const Tezos = new TezosToolkit('https://rpczero.tzbeta.net/');
 const wallet = new BeaconWallet({
     name: 'Simple Storage'
 });
@@ -17,7 +17,7 @@ const init = () =>
         // } else {
         try {
             await wallet.requestPermissions({
-                network: { type: 'ithacanet' }
+                network: { type: 'jakartanet' }
             });
             console.log(wallet)
             Tezos.setWalletProvider(wallet);
@@ -36,7 +36,7 @@ const getAccount = async () => {
         return { connected: true, account: _account }
     try {
         await wallet.requestPermissions({
-            network: { type: 'ithacanet' }
+            network: { type: 'jakartanet' }
         });
         Tezos.setWalletProvider(wallet);
     } catch (err) {
