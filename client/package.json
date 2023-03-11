@@ -6,6 +6,7 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.7.0",
+    "@taquito/beacon-wallet": "^15.1.0",
     "@taquito/taquito": "^12.1.0",
     "@taquito/tzip16": "^12.1.0",
     "@temple-wallet/dapp": "^7.0.0",
